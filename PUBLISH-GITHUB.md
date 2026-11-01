@@ -1,6 +1,6 @@
 # نشر المشروع على GitHub وGitHub Pages — خطوة بخطوة
 
-المستودع المحلي جاهز في `D:\mc modes\corpsegraves-github`. **لم يُرفع إلى GitHub** لأن ذلك يحتاج حسابك. اتبع الخطوات بالترتيب.
+المستودع المحلي جاهز في `D:\mc modes\corpsegraves`، ونُشر على GitHub: `https://github.com/kadoew/corpse-graves`. تبقى الخطوات أدناه مرجعاً للتحديثات والإصدارات القادمة.
 
 ## 0) قبل النشر — قرارات مهمة
 
@@ -29,7 +29,7 @@
 ثبّت Git for Windows إن لم يكن مثبتاً، ثم من PowerShell:
 
 ```powershell
-cd "D:\mc modes\corpsegraves-github"
+cd "D:\mc modes\corpsegraves"
 git config user.name "اسمك"
 git config user.email "بريدك@example.com"
 
@@ -105,7 +105,7 @@ git push
 ## 7) تحديث الموقع مستقبلاً
 
 1. عدّل `corpsegraves-site/dist` (المصدر).
-2. انسخه فوق `corpsegraves-github/docs` (احتفظ بـ`.nojekyll`).
+2. انسخه فوق `corpsegraves/docs` (احتفظ بـ`.nojekyll`).
 3. حدّث `docs/downloads` والجرار والبصمات والحزمة.
 4. `git add docs && git commit -m "site: 1.1.x" && git push`.
 
