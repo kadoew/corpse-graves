@@ -28,14 +28,14 @@
 
 ## التحميل
 
-- **GitHub Releases:** `https://github.com/YOUR_USERNAME/corpse-graves/releases` — ارفع الجرار والحزمة هنا بعد إنشاء المستودع.
-- **صفحة GitHub Pages:** `https://YOUR_USERNAME.github.io/corpse-graves/` — تُنشر من مجلد `docs/` بعد تفعيل Pages.
+- **GitHub Releases:** `https://github.com/kadoew/corpse-graves/releases` — ارفع الجرار والحزمة هنا بعد إنشاء المستودع.
+- **صفحة GitHub Pages:** `https://kadoew.github.io/corpse-graves/` — تُنشر من مجلد `docs/` بعد تفعيل Pages.
 - **مرايا مؤقتة/دائمة حالياً:**
   - صفحة الإصدار: https://telegra.ph/Corpse-Graves-110--تحميل-Fabric-وForge-وNeoForge-11-01
   - الحزمة الكاملة: https://files.catbox.moe/h6miy2.zip
     `SHA-256: bf201d761d61fd7adb9e57788db9da347fb8582fc1ba3b9fe504bb2c37ca3586`
 
-> بعد إنشاء مستودعك، استبدل `YOUR_USERNAME` في هذا الملف وفي `docs/` إن لزم.
+> بعد إنشاء مستودعك، استبدل `kadoew` في هذا الملف وفي `docs/` إن لزم.
 
 ## التثبيت
 
