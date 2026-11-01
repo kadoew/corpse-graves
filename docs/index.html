@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corpse Graves 1.1.0 — لا تفقد غنائمك بعد الموت</title>
+  <meta name="description" content="مود ماين كرافت يحوّل غنائم الموت إلى قبر محمي يعرض سكين اللاعب، مع هولوغرام للمؤقتات، وواجهة Take All/Restore. Fabric 26.x و1.21/1.20.1 وNeoForge وForge.">
+  <meta name="theme-color" content="#0b0d12">
+  <meta property="og:title" content="Corpse Graves 1.1.0 — قبر محمي لكل غنائمك">
+  <meta property="og:description" content="لا تفقد غنائمك مرة أخرى. جسد بسكين اللاعب، هولوغرام حي، حماية للمالك، واستعادة فورية. Fabric وNeoForge وForge.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/grave.png">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Corpse Graves — الصفحة الرئيسية">
+      <img src="assets/icon.png" alt="" width="40" height="40">
+      <span class="brand-text"><strong>Corpse Graves</strong><small>مود القبور الآمنة</small></span>
+    </a>
+    <nav class="nav" aria-label="التنقل الرئيسي">
+      <a href="#features">الميزات</a>
+      <a href="#downloads">التحميل</a>
+      <a href="#install">التثبيت</a>
+      <a href="#config">الإعدادات</a>
+      <a href="#tests">الاختبار</a>
+    </nav>
+    <a class="top-cta" href="#downloads">تحميل 1.1.0</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> الإصدار 1.1.0 · Fabric · NeoForge · Forge</p>
+        <h1>لا تفقد غنائمك<br><em>مرة أخرى.</em></h1>
+        <p class="lede">عند موت اللاعب تُحفظ كل أغراضه وخبرته داخل قبر محمي، بجسد يعرض <strong>سكين اللاعب الحقيقي</strong>، وهولوغرام عائم يخبرك بالاسم ومتى يختفي القبر ومتى يُفتح للآخرين.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#downloads">حمّل نسختك</a>
+          <a class="btn ghost" href="#screens">شاهد الواجهة</a>
+        </div>
+        <ul class="hero-list">
+          <li>سكين حقيقي</li>
+          <li>حماية ذكية</li>
+          <li>هولوغرام مباشر</li>
+          <li>JSON قابل للتعديل</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="shot-frame">
+          <img src="assets/grave.png" alt="قبر لاعب مستلقٍ على منصة حجرية مع هولوغرام يعرض Tester وعدّادي الاختفاء والحماية" width="1280" height="720">
+          <div class="shot-tag">1.20.1 · Forge</div>
+        </div>
+        <p class="hero-note">لقطة من اختبار حقيقي على عميل Forge 1.20.1 — الجسد والهولوغرام والظل.</p>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="أرقام سريعة">
+      <div><strong>23</strong><span>ملف جاهز</span></div>
+      <div><strong>9</strong><span>نسخ ماين كرافت</span></div>
+      <div><strong>50%</strong><span>خبرة مستعادة</span></div>
+      <div><strong>0</strong><span>غنائم مفقودة</span></div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="section-head">
+        <p class="kicker">لماذا Corpse Graves؟</p>
+        <h2>كل ما تحتاجه عند الموت، في مكان واحد.</h2>
+        <p class="sub">لا صناديق مؤقتة ولا سباق مع الزمن. القبر ينتظرك ويعرض لك كل شيء بوضوح.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0-6 6v3l-2 3h16l-2-3V9a6 6 0 0 0-6-6Z"/><path d="M9 18v2m6-2v2"/></svg></span>
+          <h3>سكين اللاعب الحقيقي</h3>
+          <p>في 26.3 يُستخدم Mannequin من الفانيلا، وفي النسخ الأقدم جسد مخصص يعرض السكين الحية للاعب بدل Steve.</p>
+        </article>
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3>حماية المالك</h3>
+          <p>صاحب القبر يفتحه دائماً. الآخرون ينتظرون مؤقت الحماية (30 دقيقة افتراضياً)، والمشرفون يمكنهم تجاوزها.</p>
+        </article>
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H8l-4 4V5Z"/><path d="M8 9h8M8 12h5"/></svg></span>
+          <h3>هولوغرام حي</h3>
+          <p>الاسم بالذهبي، عدّاد الاختفاء بالفيروزي، وحالة الحماية بالأحمر أو الأخضر — كلها قابلة للتخصيص.</p>
+        </article>
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></span>
+          <h3>واجهة مخصصة</h3>
+          <p>انقر بالزر الأيمن لفتح واجهة داكنة أنيقة فيها زرّا <b>Take All</b> و<b>Restore</b> مع الأغراض والخبرة.</p>
+        </article>
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5"/><path d="M18 4v4h-4M20 12a8 8 0 0 1-14 5"/><path d="M6 20v-4h4"/></svg></span>
+          <h3>استعادة فورية</h3>
+          <p><b>Shift + كليك</b> يعيد كل غرض إلى خانته الأصلية. ما لا يتسع يبقى في القبر.</p>
+        </article>
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span>
+          <h3>اختفاء ذكي</h3>
+          <p>المؤقت يتوقف أثناء غياب صاحب القبر وعند إغلاق التشك. القبر يبقى بعد إعادة تشغيل السيرفر.</p>
+        </article>
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 18c3-6 5-9 8-9s5 3 8 9"/><path d="M12 3v6m-3-3h6"/></svg></span>
+          <h3>إنقاذ الفراغ</h3>
+          <p>إذا مات اللاعب في الفراغ، يبحث المود عن سطح آمن قريب ويضع القبر هناك.</p>
+        </article>
+        <article class="feature">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 4h8l4 4v12H4V4h4Z"/><path d="M9 12h6M9 16h6"/></svg></span>
+          <h3>إعدادات عميقة</h3>
+          <p>مؤقتات، ألوان، ارتفاع الهولوغرام، وضعية الجسد، نسبة الخبرة، الحماية، وإنقاذ الفراغ — كلها في JSON واحد.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section screens" id="screens">
+      <div class="section-head">
+        <p class="kicker">من داخل اللعبة</p>
+        <h2>لقطات من اختبارات حقيقية.</h2>
+        <p class="sub">ليست صوراً ترويجية: قبر على منصة اختبار، وجسد من عميل NeoForge 1.21.1، وواجهات من Forge وFabric.</p>
+      </div>
+      <div class="gallery">
+        <figure>
+          <img src="assets/neoforge-grave.png" alt="قبر اللاعب Dev على منصة حجرية مع هولوغرام يعرض العدادين — NeoForge 1.21.1" loading="lazy" width="1280" height="720">
+          <figcaption>الجسد، الظل، والهولوغرام — NeoForge 1.21.1</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/gui.png" alt="واجهة القبر المخصصة مع أزرار Take All وRestore والأغراض والخبرة" loading="lazy" width="1280" height="720">
+          <figcaption>واجهة Take All / Restore — Forge 1.20.1</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/fabric-gui.png" alt="واجهة القبر على عميل Fabric 1.20.1 مع خمسة أغراض و698 خبرة" loading="lazy" width="1280" height="720">
+          <figcaption>الواجهة نفسها على Fabric 1.20.1</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section downloads" id="downloads">
+      <div class="section-head">
+        <p class="kicker">التحميل</p>
+        <h2>اختر نسختك بالضبط.</h2>
+        <p class="sub">ملف واحد لكل بيئة. لا تضع أكثر من نسخة Corpse Graves في مجلد <code>mods</code>.</p>
+      </div>
+
+      <div class="download-tools">
+        <div class="filters" role="group" aria-label="تصفية حسب اللودر">
+          <button class="filter active" data-filter="all" type="button">الكل</button>
+          <button class="filter" data-filter="fabric" type="button">Fabric</button>
+          <button class="filter" data-filter="neoforge" type="button">NeoForge</button>
+          <button class="filter" data-filter="forge" type="button">Forge</button>
+        </div>
+        <span class="count" id="dl-count">23 ملف</span>
+      </div>
+
+      <div class="dl-list" id="dl-list">
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 26.4 <small>alpha.6</small></h3>
+            <p>Loader 0.19.3+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.165.1+26.4</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.4.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row featured" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 26.3 <span class="pick">موصى به</span></h3>
+            <p>Loader 0.19.3+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.165.0+26.3</code></div>
+          <div class="dl-actions">
+            <a class="btn small primary" href="downloads/corpsegraves-1.1.0+26.3.jar" download>تحميل المود</a>
+            <a class="mini" href="downloads/fabric-api-0.165.0+26.3.jar" download>Fabric API</a>
+          </div>
+        </article>
+
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 26.2</h3>
+            <p>Loader 0.19.3+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.161.0+26.2</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.2.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 26.1.2</h3>
+            <p>Loader 0.19.3+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.155.3+26.1.2</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.1.2.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 26.1.1</h3>
+            <p>Loader 0.19.3+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.155.3+26.1.2</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.1.1.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 26.1</h3>
+            <p>Loader 0.19.3+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.155.3+26.1.2</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.1.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 1.21.1</h3>
+            <p>Loader 0.16+ · Java 21</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.116.17+1.21.1</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.21.1.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 1.21</h3>
+            <p>Loader 0.16+ · Java 21</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.102.0+1.21</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.21.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="fabric">
+          <div class="dl-main">
+            <span class="tag fabric">Fabric</span>
+            <h3>Minecraft 1.20.1</h3>
+            <p>Loader 0.15+ · Java 17</p>
+          </div>
+          <div class="dl-dep"><span>Fabric API</span><code>0.92.12+1.20.1</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.20.1.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 26.3</h3>
+            <p>Forge 66.1.2+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.3-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 26.2</h3>
+            <p>Forge 65.1.5+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.2-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 26.1.2</h3>
+            <p>Forge 64.1.5+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.1.2-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 26.1.1</h3>
+            <p>Forge 63.0.2+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.1.1-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 26.1</h3>
+            <p>Forge 62.0.9+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.1-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 1.21.1</h3>
+            <p>Forge 52.1.20+ · Java 21</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.21.1-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 1.21</h3>
+            <p>Forge 51.0.33+ · Java 21</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.21-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="forge">
+          <div class="dl-main">
+            <span class="tag forge">Forge</span>
+            <h3>Minecraft 1.20.1</h3>
+            <p>Forge 47.x · Java 17</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج موداً آخر</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.20.1-forge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="neoforge">
+          <div class="dl-main">
+            <span class="tag neoforge">NeoForge</span>
+            <h3>Minecraft 26.3</h3>
+            <p>NeoForge 26.3.0.100+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج Fabric API</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.3-neoforge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="neoforge">
+          <div class="dl-main">
+            <span class="tag neoforge">NeoForge</span>
+            <h3>Minecraft 26.2</h3>
+            <p>NeoForge 26.2.0.93+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج Fabric API</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.2-neoforge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="neoforge">
+          <div class="dl-main">
+            <span class="tag neoforge">NeoForge</span>
+            <h3>Minecraft 26.1.2</h3>
+            <p>NeoForge 26.1.2.125+ · Java 25</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج Fabric API</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+26.1.2-neoforge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="neoforge">
+          <div class="dl-main">
+            <span class="tag neoforge">NeoForge</span>
+            <h3>Minecraft 1.21.1</h3>
+            <p>NeoForge 21.1.176+ · Java 21</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج Fabric API</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.21.1-neoforge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="neoforge">
+          <div class="dl-main">
+            <span class="tag neoforge">NeoForge</span>
+            <h3>Minecraft 1.21</h3>
+            <p>NeoForge 21.0.167+ · Java 21</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>لا يحتاج Fabric API</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.21-neoforge.jar" download>تحميل المود</a></div>
+        </article>
+
+        <article class="dl-row" data-loader="neoforge">
+          <div class="dl-main">
+            <span class="tag neoforge">NeoForge</span>
+            <h3>Minecraft 1.20.1 <small>توافق Forge</small></h3>
+            <p>NeoForge 47.1.106+ · Java 17</p>
+          </div>
+          <div class="dl-dep"><span>التبعيات</span><code>جرة متوافقة مع Forge</code></div>
+          <div class="dl-actions"><a class="btn small" href="downloads/corpsegraves-1.1.0+1.20.1-neoforge.jar" download>تحميل المود</a></div>
+        </article>
+      
+      </div>
+
+      <p class="fineprint">روابط Fabric API المباشرة: <a href="downloads/fabric-api-0.165.0+26.3.jar" download>0.165.0+26.3</a> · <a href="downloads/fabric-api-0.165.1+26.4.jar" download>0.165.1+26.4</a> · <a href="downloads/fabric-api-0.161.0+26.2.jar" download>0.161.0+26.2</a> · <a href="downloads/fabric-api-0.155.3+26.1.2.jar" download>0.155.3+26.1.2</a> · <a href="downloads/fabric-api-0.116.17+1.21.1.jar" download>0.116.17+1.21.1</a> · <a href="downloads/fabric-api-0.102.0+1.21.jar" download>0.102.0+1.21</a> · <a href="downloads/fabric-api-0.92.12+1.20.1.jar" download>0.92.12+1.20.1</a>.</p>
+
+      <div class="bundle">
+        <div>
+          <span class="kicker">كل شيء في ملف واحد</span>
+          <h3>الحزمة الكاملة — 23 جرة + جميع إصدارات Fabric API + الإعدادات + دليل التثبيت</h3>
+          <p>Fabric وForge وNeoForge في ملف واحد، مناسب لسيرفرات متعددة النسخ أو للاحتفاظ بكل الإصدارات. الحجم حوالي 18 م.ب.</p>
+        </div>
+        <div class="bundle-actions">
+          <a class="btn primary" href="downloads/corpsegraves-all-families.zip" download>تحميل الحزمة الكاملة</a>
+          <a class="mini" href="downloads/corpsegraves.sample.json" download>ملف الإعدادات النموذجي</a>
+          <a class="mini" href="downloads/SHA256SUMS.txt" download>البصمات SHA-256</a>
+          <a class="mini" href="downloads/install.txt" download>دليل التثبيت (نص)</a>
+        </div>
+      </div>
+
+      <p class="fineprint">كل ملفات Fabric API مضمَّنة داخل الحزمة الكاملة، وروابطها المفردة أسفل القائمة مباشرة. لا توجد نسخة Forge أو NeoForge لماين كرافت 26.4 لأن أياً منهما لم يصدر لها بعد، ولا نسخ NeoForge لـ26.1 أو 26.1.1. نسخة NeoForge 1.20.1 هي جرة التوافق الثنائي مع فرع NeoForge 47.1.x. اختر الصف المطابق للودر ونسخة اللعبة فقط.</p>
+    </section>
+
+    <section class="section install" id="install">
+      <div class="section-head">
+        <p class="kicker">التثبيت</p>
+        <h2>ثلاث خطوات، ثم انسَ الموضوع.</h2>
+        <p class="sub">ثبّت المود على العميل لرؤية الجسد والواجهة. وعلى السيرفر ليُحفظ كل شيء للجميع.</p>
+      </div>
+      <div class="install-grid">
+        <article class="panel">
+          <span class="tag fabric">Fabric — 26.x</span>
+          <h3>الأحدث والأكمل</h3>
+          <ol>
+            <li>ثبّت <b>Fabric Loader 0.19.3+</b> لماين كرافت 26.1 → 26.4 (تم اختبار 0.19.5 و0.20.1)، و<b>Java 25</b>.</li>
+            <li>ضع جرّة نُسختك و<b>Fabric API</b> المطابق في <code>mods</code> (ولهذه النسخة: <code>fabric-api-0.165.0+26.3.jar</code>).</li>
+            <li>شغّل اللعبة من ملف Fabric. للسيرفر: ضع الملفين أيضاً في <code>mods</code> الخاص بالسيرفر.</li>
+          </ol>
+        </article>
+        <article class="panel">
+          <span class="tag fabric">Fabric — 1.21.1 / 1.21 / 1.20.1</span>
+          <h3>النسخة القديمة المدعومة</h3>
+          <ol>
+            <li>Java 21 لـ1.21 و1.21.1، وJava 17 لـ1.20.1.</li>
+            <li>استخدم Fabric API المذكور في صف نسختك: <code>0.116.17</code> / <code>0.102.0</code> / <code>0.92.12</code>.</li>
+            <li>ضع المود وAPI في <code>mods</code> على العميل والسيرفر. الجسد هنا يعرض السكين الحية للاعب.</li>
+          </ol>
+        </article>
+        <article class="panel">
+          <span class="tag neoforge">NeoForge</span>
+          <span class="tag forge">Forge</span>
+          <h3>عائلة Forge — 14 نسخة</h3>
+          <ol>
+            <li><b>Forge:</b> 1.20.1 (47.x / Java 17) · 1.21 و1.21.1 (51/52 / Java 21) · 26.1→26.3 (62→66 / Java 25).</li>
+            <li><b>NeoForge:</b> 1.20.1 (47.1.106 / Java 17، جرة التوافق) · 1.21 (21.0.167) و1.21.1 (21.1.176) على Java 21 · 26.1.2→26.3 على Java 25.</li>
+            <li>ضع الجرة في <code>mods</code> على العميل والسيرفر. لا تستخدم جرة Fabric أو NeoForge مع Forge، والعكس صحيح.</li>
+          </ol>
+        </article>
+      </div>
+      <div class="note-row">
+        <div class="note"><strong>سيرفرات ودّية</strong><span>جُرِّب عميل فانيلا على Forge 1.21 و1.21.1 و26.3: يرى الهولوغرام ويتفاعل ويأخذ الأغراض. NeoForge يتطلب المود على العميل، والجسد والواجهة يحتاجان العميل دائماً.</span></div>
+        <div class="note"><strong>احذف النسخة القديمة</strong><span>وجود أكثر من Corpse Graves في <code>mods</code> سيسبب خطأ duplicate mod. احتفظ بواحدة فقط.</span></div>
+      </div>
+    </section>
+
+    <section class="section config" id="config">
+      <div class="section-head">
+        <p class="kicker">الإعدادات</p>
+        <h2>القبر على ذوقك.</h2>
+        <p class="sub">كل شيء في <code>config/corpsegraves.json</code> على السيرفر أو اللعبة المفردة، ويُطبَّق مباشرة عبر <code>/corpsegraves reload</code>.</p>
+      </div>
+      <div class="config-grid">
+        <div class="code-card">
+          <div class="code-head"><span>corpsegraves.json</span><button id="copy-config" type="button">نسخ</button></div>
+          <pre dir="ltr"><code id="config-code">{
+  "despawnSeconds": 3600,
+  "unlockSeconds": 1800,
+  "xpRecoveryPercent": 50.0,
+  "ownedGravesAlwaysAccessible": true,
+  "hologram": {
+    "scale": 1.4,
+    "height": 1.45,
+    "background": "#66000000",
+    "nameColor": "#FFAA00",
+    "despawnColor": "#55FFFF",
+    "protectedColor": "#FF5555",
+    "unlockedColor": "#55FF55"
+  }
+}</code></pre>
+        </div>
+        <ul class="config-list">
+          <li><b>despawnSeconds</b><span>مدة بقاء القبر (3600 = ساعة). <code>-1</code> = لا يختفي.</span></li>
+          <li><b>unlockSeconds</b><span>مدة الحماية للآخرين (1800 = 30 دقيقة). <code>0</code> = مفتوح فوراً، <code>-1</code> = للمالك فقط.</span></li>
+          <li><b>xpRecoveryPercent</b><span>نسبة الخبرة المستعادة عند إفراغ القبر (50%).</span></li>
+          <li><b>hologram.scale / height</b><span>حجم الهولوغرام وارتفاعه فوق القبر.</span></li>
+          <li><b>hologram.background</b><span>الخلفية بصيغة ARGB (شفافة افتراضياً).</span></li>
+          <li><b>voidRescue.enabled</b><span>إنقاذ القبر إذا سقط اللاعب في الفراغ.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section commands" id="commands">
+      <div class="section-head">
+        <p class="kicker">الأوامر</p>
+        <h2>تحكّم كامل للسيرفر.</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">الأمر</th><th scope="col">الوظيفة</th><th scope="col">الصلاحية</th></tr></thead>
+          <tbody>
+            <tr><td><code>/corpsegraves locate</code></td><td>إحداثيات أقرب قبر لك.</td><td>الجميع</td></tr>
+            <tr><td><code>/corpsegraves reload</code></td><td>إعادة تحميل ملف JSON بدون إعادة تشغيل.</td><td>مشرف</td></tr>
+            <tr><td><code>/corpsegraves unlock &lt;player&gt;</code></td><td>فتح كل قبور لاعب.</td><td>مشرف</td></tr>
+            <tr><td><code>/corpsegraves remove &lt;player&gt;</code></td><td>حذف قبور لاعب وإسقاط أغراضه.</td><td>مشرف</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section tests" id="tests">
+      <div class="section-head">
+        <p class="kicker">الاختبار</p>
+        <h2>جُرِّب فعلاً، لا مجرد «يعمل إن شاء الله».</h2>
+        <p class="sub">النتائج التالية من سيرفرات مخصصة وعملاء حقيقيين خلال بناء الإصدار 1.1.0.</p>
+      </div>
+      <div class="test-grid">
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>Forge 26.3 — عميل حقيقي</b><p>سيرفر إنتاجي + عميل Forge 66.1.2: القبر والهولوغرام، فتح الواجهة، وTake All نقل 3 ستاكات و698 خبرة ثم حذف القبر.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>NeoForge 26.3 — عميل حقيقي</b><p>سيرفر 26.3.0.100 + عميل NeoForge: الجسد والسكين والهولوغرام، وواجهة Take All نقلت 3 ستاكات و698 خبرة ثم حُذف القبر.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>Minecraft 26.3 — Fabric</b><p>لعب كامل: الموت، السكين، الهولوغرام، الواجهة، 50% خبرة، الاستعادة، وبقاء القبر بعد إعادة التشغيل.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>Forge 1.21 و1.21.1</b><p>سيرفر إنتاجي + جسر Vanilla: إنشاء القبر، الهولوغرام، التفاعل، والاستعادة السريعة مع 698 خبرة.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>Forge 1.20.1 وNeoForge 1.21.1</b><p>عملاء حقيقيون: الجسد والسكين والهولوغرام، فتح الواجهة، وTake All نقل خمسة ستاكات و698 خبرة.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>NeoForge 1.20.1 — توافق</b><p>Neo 47.1.106 + عميل Vanilla: القبر والهولوغرام والهيت بوكس، ثم Take All نقل 3 ستاكات و698 خبرة واختفى القبر.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>Fabric 1.20.1 / 1.21 / 1.21.1</b><p>العميل يتصل، الواجهة والهيت بوكس يعملان، ونقل خمسة ستاكات و698 خبرة ثم حذف القبر.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>كل نسخ 26.x</b><p>Fabric 26.1→26.4، وForge 26.1→26.3، وNeoForge 26.1.2→26.3: سيرفرات مخصصة تصل Done وتُنشئ القبور.</p></div></div>
+        <div class="test"><span class="check" aria-hidden="true">✓</span><div><b>بعد إعادة التشغيل</b><p>في Forge 1.20.1 وFabric 26.3: القبر والهولوغرام والمؤقتات تعود كما هي بعد restart للسيرفر.</p></div></div>
+      </div>
+      <p class="fineprint">فُحصت الواجهة والجسد بصرياً على عملاء حقيقيين: Fabric 26.3 و1.21.1 و1.20.1، وForge 26.3 و1.20.1، وNeoForge 26.3 و1.21.1. جُرِّب NeoForge 1.20.1 بعميل Vanilla: القبر ثم أخذ كل الأغراض و698 خبرة. بقية نسخ 26.x جُرِّبت على سيرفرات مخصصة (Done + إنشاء قبور) دون فحص بصري كامل. المشروع مفتوح المصدر برخصة MIT؛ لأي مشكلة افتح Issue في مستودع GitHub.</p>
+    </section>
+
+    <section class="cta">
+      <div>
+        <p class="kicker">جاهز للموت القادم</p>
+        <h2>قبرك الأول على بُعد نقرة.</h2>
+      </div>
+      <a class="btn primary" href="#downloads">اختر نسختك الآن</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-brand"><img src="assets/icon.png" alt="" width="28" height="28"><span>Corpse Graves <b>1.1.0</b></span></div>
+    <p>مود غير رسمي لماين كرافت Java Edition. رخصة MIT. صُنع بواسطة Kador.</p>
+    <p class="foot-links"><a href="downloads/install.txt">دليل التثبيت</a><a href="downloads/SHA256SUMS.txt">البصمات</a><a href="#top">للأعلى</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

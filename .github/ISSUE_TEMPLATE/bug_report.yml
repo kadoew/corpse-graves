@@ -1,0 +1,64 @@
+name: Bug report
+description: Report a problem with Corpse Graves
+title: "[Bug] "
+labels: ["bug", "needs-log"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please attach the **full** `latest.log` and the exact jar name.
+        Test on a copy of your world/server first.
+  - type: input
+    id: minecraft
+    attributes:
+      label: Minecraft version
+      placeholder: "e.g. 26.3, 1.21.1, 1.20.1"
+    validations:
+      required: true
+  - type: input
+    id: loader
+    attributes:
+      label: Loader and version
+      placeholder: "Fabric Loader 0.20.1 + Fabric API 0.165.0+26.3 / Forge 66.1.2 / NeoForge 26.3.0.100"
+    validations:
+      required: true
+  - type: input
+    id: jar
+    attributes:
+      label: Corpse Graves jar
+      placeholder: "corpsegraves-1.1.0+26.3.jar"
+    validations:
+      required: true
+  - type: dropdown
+    id: side
+    attributes:
+      label: Where did it happen?
+      options:
+        - Singleplayer
+        - Dedicated server
+        - Both
+        - Client only
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Steps to reproduce, expected behavior, and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / crash report
+      description: Paste or attach latest.log; do not paste secrets or player personal data.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I am using only one Corpse Graves jar in mods
+          required: true
+        - label: I tested on a copy/backup of my world
+          required: true

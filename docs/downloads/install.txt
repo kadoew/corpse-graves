@@ -1,0 +1,166 @@
+========================================
+Corpse Graves 1.1.0 — جميع النسخ
+تعليمات سريعة لكل منصة
+========================================
+
+【Fabric — 26.x (Java 25)】
+- الملفات في مجلد 26.x: جرّة لكل إصدار + ملف Fabric API المطابق:
+  26.1 / 26.1.1 / 26.1.2: corpsegraves-1.1.0+26.1*.jar + fabric-api-0.155.3+26.1.2.jar
+  26.2: corpsegraves-1.1.0+26.2.jar + fabric-api-0.161.0+26.2.jar
+  26.3: corpsegraves-1.1.0+26.3.jar + fabric-api-0.165.0+26.3.jar
+  26.4 (snapshot 6): corpsegraves-1.1.0+26.4.jar + fabric-api-0.165.1+26.4.jar
+- Fabric Loader 0.19.3+ (اختُبر 0.19.5 و0.20.1 مع 26.3). ضع الجرّة وAPI معاً في mods.
+
+【Fabric — 1.21.1 / 1.21 / 1.20.1】
+- الملفات في مجلد fabric-legacy:
+  1.21.1: corpsegraves-1.1.0+1.21.1.jar + fabric-api-0.116.17+1.21.1.jar (Java 21)
+  1.21:   corpsegraves-1.1.0+1.21.jar   + fabric-api-0.102.0+1.21.jar   (Java 21)
+  1.20.1: corpsegraves-1.1.0+1.20.1.jar + fabric-api-0.92.12+1.20.1.jar (Java 17)
+- ضع المود وFabric API معاً في مجلد mods على العميل والسيرفر.
+
+【Forge — 8 إصدارات】
+- forge/corpsegraves-1.1.0+1.20.1-forge.jar  : Forge 47.x + Java 17
+- forge/corpsegraves-1.1.0+1.21-forge.jar    : Forge 51.0.33+ + Java 21
+- forge/corpsegraves-1.1.0+1.21.1-forge.jar  : Forge 52.1.20+ + Java 21
+- forge/corpsegraves-1.1.0+26.1-forge.jar    : Forge 62.0.9+ + Java 25
+- forge/corpsegraves-1.1.0+26.1.1-forge.jar  : Forge 63.0.2+ + Java 25
+- forge/corpsegraves-1.1.0+26.1.2-forge.jar  : Forge 64.1.5+ + Java 25
+- forge/corpsegraves-1.1.0+26.2-forge.jar    : Forge 65.1.5+ + Java 25
+- forge/corpsegraves-1.1.0+26.3-forge.jar    : Forge 66.1.2+ + Java 25
+- لا تحتاج أي مود آخر. ضع الجرّة في mods على العميل والسيرفر.
+- سيرفرات Forge تقبل عملاء vanilla: يرون الهولوغرام والهيت بوكس ويأخذون الأغراض،
+  أما الجسد والواجهة فيحتاجان المود على العميل.
+- جُرِّب Forge 1.20.1 إنتاجياً بعميل حقيقي، وForge 1.21/1.21.1 بعميل vanilla،
+  وForge 26.3 بعميل حقيقي (Take All نقل 3 ستاكات و698 خبرة).
+
+【NeoForge — 5 إصدارات】
+- neoforge/corpsegraves-1.1.0+1.21-neoforge.jar   : NeoForge 21.0.167+ + Java 21
+- neoforge/corpsegraves-1.1.0+1.21.1-neoforge.jar : NeoForge 21.1.176+ + Java 21
+- neoforge/corpsegraves-1.1.0+26.1.2-neoforge.jar : NeoForge 26.1.2.125+ + Java 25
+- neoforge/corpsegraves-1.1.0+26.2-neoforge.jar   : NeoForge 26.2.0.93+ + Java 25
+- neoforge/corpsegraves-1.1.0+26.3-neoforge.jar   : NeoForge 26.3.0.100+ + Java 25
+- لا يحتاج Fabric API. ضع الجرّة في mods على العميل والسيرفر.
+- عميل NeoForge يجب أن يملك المود أيضاً؛ NeoForge يرفض عملاء vanilla.
+- NeoForge لم يُصدر نسخاً لـ26.1 أو 26.1.1 أو 26.4، ولا نسخة 1.20.1 مدعومة هنا.
+
+【قائمة الملفات】
+- الحزمة الكاملة تضم 22 جرّة: 9 Fabric + 8 Forge + 5 NeoForge،
+  مع 7 ملفات Fabric API وملف الإعدادات ودليل التثبيت والتوثيق.
+- تحقق من SHA256SUMS.txt بعد فك الحزمة.
+
+【ملاحظات عامة لكل النسخ】
+- احذف أي نسخة قديمة من المود قبل وضع الجديدة (نفس معرف المود corpsegraves).
+- الإعدادات موحدة: config/corpsegraves.json ثم /corpsegraves reload.
+- الواجهة GUI تتطلب المود على العميل. في Forge (1.21/1.21.1/26.3) يستطيع اللاعب vanilla
+  رؤية الهولوغرام وأخذ كل الأغراض بنقرة؛ أما NeoForge فيرفض عملاء vanilla أصلًا
+  ويلزم عميل NeoForge مع المود للواجهة والجسد.
+- كل النسخ الـ22 تم بناؤها وسيرفراتها تعمل؛ Fabric 26.3 وForge 26.3 وNeoForge 26.3
+  جُرِّبت على عملاء حقيقيين (الجسد/السكين/الهولوغرام/GUI/Take All).
+- نسخة Fabric 1.20.1 جُرِّبت أيضاً على عميل حقيقي (الجسد/الهولوغرام/GUI/Take All)،
+  وأُصلح خطأ تسجيل قائمة الواجهة (MenuType) فيها وفي نسختي 1.21/1.21.1 وأُعيد بناؤها.
+- اكتُشف على عميل Fabric 1.21.1 خطأ ثانٍ في حزمة التراسل hello (كان يقصي أي عميل
+  عند الدخول) وأُصلح باستخدام HelloC2S.INSTANCE؛ العميل يتصل الآن بنجاح،
+  وأُعيد بناء نسختي 1.21/1.21.1.
+- أُزيل اسم الهيت بوكس التشخيصي (corpsegraves:uuid) من كل نسخ Fabric القديمة
+  وForge/NeoForge؛ أصبح تحديد القبر يتم بمطابقة UUID الهيت بوكس مع القبر المحفوظ.
+  تم التحقق على 1.21.1 بنقرة عميل vanilla: نُقلت كل الأغراض واختُبرت الواجهة.
+- نسخة NeoForge 1.21.1 جُرِّبت على سيرفر مخصص وعميل حقيقي: الجسد والسكين
+  والهولوغرام، فتح الواجهة، وTake All نقل 5 ستاكات و698 خبرة ثم حذف القبر.
+  اكتُشف خطأ handshake خاص بـ NeoForge (StreamCodec.unit) وأُصلح باستخدام
+  HelloC2S.INSTANCE؛ السيرفر يؤكد Client handshake from Dev بعد الإصلاح.
+
+========================================
+Corpse Graves 1.1.0 — Minecraft 26.3 / Fabric
+تعليمات التثبيت والتشغيل
+========================================
+
+【المتطلبات】
+- Minecraft Java Edition 26.3
+- Fabric Loader 0.19.3 أو أحدث (تم اختبار 0.19.5 و0.20.1 مع جار 26.3 النهائي)
+- Fabric API 0.165.0+26.3  (الملف المرفق fabric-api-0.165.0+26.3.jar)
+- Java 25 (يطلبها Minecraft 26.3 نفسه)
+
+【لماذا ظهر الخطأ السابق؟】
+1) "requires version 0.20.0 or later of fabricloader"
+   كان المود القديم يطلب Loader 0.20.0. تم إصلاح ذلك في 1.1.0؛ الحد الأدنى الآن 0.19.0
+   وFabric API نفسه يحتاج 0.19.3. لذلك Loader 0.19.5 يعمل الآن.
+2) "fabric-api is missing"
+   يجب تثبيت Fabric API أيضاً؛ المود لا يعمل بدونه.
+   لا تضع المود وحده في مجلد mods.
+
+【التثبيت】
+1) احذف أي نسخة قديمة من المود من مجلد mods، خصوصاً:
+   corpsegraves-1.0.0.jar
+   (وجود نسختين بنفس معرف المود يسبب خطأ).
+2) انسخ الملفين التاليين إلى مجلد mods:
+   - corpsegraves-1.1.0.jar
+   - fabric-api-0.165.0+26.3.jar
+3) شغّل اللعبة عبر Fabric Loader 26.3.
+4) للتشغيل على سيرفر: ضع نفس الملفين في مجلد mods على السيرفر أيضاً.
+   - يمكن تشغيل المود على السيرفر فقط: اللاعبون بدون المود يرون القبر والهولوغرام
+     (لأنهما كيانات فانيلا) ويستطيعون أخذ كل الأغراض بنقرة.
+   - الواجهة الرسومية (GUI) والأزرار تحتاج المود على جهاز اللاعب.
+   - رفع سكين اللاعب المخصص في وضع offline يحتاج أيضاً المود على العميل.
+
+【الإعدادات】
+- يُنشأ الملف تلقائياً على السيرفر في:
+  config/corpsegraves.json
+  وعلى اللعبة المفردة/العميل في:
+  .minecraft/config/corpsegraves.json
+- الملف المرفق corpsegraves.sample.json هو نسخة افتراضية كاملة يمكنك نسخها فوق الملف.
+- بعد أي تعديل نفّذ:
+  /corpsegraves reload
+
+أهم الخيارات:
+  despawnSeconds = 3600       مدة بقاء القبر (60 دقيقة)، -1 = لا يختفي
+  unlockSeconds  = 1800       مدة حماية القبر (30 دقيقة). 0 = متاح للجميع فوراً
+                              -1 = محمي لصاحبه للأبد
+  xpRecoveryPercent = 50      نسبة الخبرة المستعادة (الافتراضي الآن 50%)
+  onlyOwner... (حُذف)          استخدم unlockSeconds = -1 لحماية دائمة
+  corpse.displayArmor = false إظهار دروع الميت على الجثة (false يُظهر السكين)
+  corpse.pose = SLEEPING      وضعية الجثة: SLEEPING أو SWIMMING أو CROUCHING أو STANDING
+  hologram.scale = 1.4        حجم الهولوغرام
+  hologram.background = "#66000000"  خلفية شفافة (AA RRGGBB)
+  hologram.nameColor / despawnColor / protectedColor / unlockedColor
+  hologram.height = 1.45      ارتفاع الهولوغرام
+  hologram.showName/showDespawn/showProtection = true
+  voidRescue.enabled = true   إنقاذ القبر إذا مات اللاعب في الفراغ
+
+【الاستخدام】
+- انقر بالزر الأيمن على الجثة لفتح الواجهة.
+- زر Take All  = أخذ كل الأغراض إلى حقيبتك.
+- زر Restore   = إعادة الأغراض إلى خاناتها الأصلية.
+- Shift + زر أيمن = استعادة فورية لكل شيء إلى الخانات الأصلية.
+- الضغط على الجثة أو الهولوغرام لا يسمح للآخرين بالفتح قبل انتهاء عداد الحماية.
+- الهولوغرام يعرض:
+     الاسم (ذهبي)
+     Despawns: 59:45   (متى يختفي القبر)
+     Protected: 29:45  (متى يُفتح للآخرين) أو Unlocked
+- نسبة الخبرة الافتراضية 50%؛ تُعاد عند إفراغ القبر.
+
+【الأوامر】
+/corpsegraves list                 قائمة قبورك
+/corpsegraves locate               إحداثيات أقرب قبر
+/corpsegraves reload               إعادة تحميل الإعدادات (مشرف)
+/corpsegraves unlock <player>      فتح كل قبور لاعب (مشرف)
+/corpsegraves remove <player>      حذف القبور وإسقاط الأغراض (مشرف)
+/corpsegraves open <player>        فتح أقرب قبر للاعب (مشرف/دعم)
+/corpsegraves restore <player>     استعادة أقرب قبر للاعب (مشرف/دعم)
+
+【مهم للسيرفرات】
+- إذا كنت تستخدم Loader 0.19.5: هذا الإصدار يعمل معه بشرط وجود Fabric API 0.165.0+26.3.
+- إذا ظهرت رسالة duplicate mod: احذف النسخة القديمة 1.0.0 من mods.
+- بيانات القبور تُحفظ في world/data/corpsegraves_graves.dat وتبقى بعد إعادة تشغيل السيرفر.
+- المود لا يستخدم حزماً مخصصة للفانيلا، فلا يكسر اللاعبين غير المودّين.
+
+【إذا لم يعمل شيء】
+- تأكد من Java 25 ومن إصدارات Fabric API/Minecraft.
+- أرسل آخر 100 سطر من logs/latest.log على السيرفر.
+- جرّب /corpsegraves reload ثم اقتل نفسك في عالم اختبار.
+
+إصدار 1.1.0 — تغييرات:
+- إصلاح أزرار Take All/Restore (أصبحت أزراراً حقيقية + حزمة أكشن مخصصة).
+- إعادة عدّاد الحماية (Despawns + Protected) في الهولوغرام.
+- إظهار سكين اللاعب الحقيقي على العميل (حتى سكين TLauncher في وضع offline).
+- خبرة 50% افتراضياً، وإخفاء الدروع افتراضياً لإظهار السكين.
+- هولوغرام أصغر وأكثر شفافية، و7 خانات تجهيزات، وعرض الخبرة القابلة للاستعادة.

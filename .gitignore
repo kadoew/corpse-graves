@@ -1,0 +1,31 @@
+# Gradle
+.gradle/
+build/
+!docs/downloads/
+
+# Local build outputs
+artifacts/
+
+# Local run data (worlds, logs, configs, test servers)
+run/
+runs/
+logs/
+*.log
+crash-reports/
+world/
+world_*/
+test-*/
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+out/
+bin/
+.DS_Store
+Thumbs.db
+
+# Local secrets
+.env
+*.token
+secrets.*

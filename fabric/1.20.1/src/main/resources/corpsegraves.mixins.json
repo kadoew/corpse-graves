@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.kador.corpsegraves.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"LivingEntityDeathMixin",
+		"DisplayAccessor",
+		"TextDisplayAccessor",
+		"InteractionAccessor"
+	],
+	"injectors": { "defaultRequire": 1 }
+}

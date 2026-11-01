@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+    id 'net.minecraftforge.gradle' version '[7.0.17,8)'
+}
+
+version = project.mod_version
+group = project.mod_group_id
+base { archivesName = project.mod_id }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+minecraft {
+    accessTransformer = true
+    runs {
+        configureEach {
+            workingDir = layout.projectDirectory.dir('run')
+            systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+        }
+        register('client') {
+            args '--username', 'DevClient', '--quickPlayMultiplayer', '127.0.0.1:25565'
+        }
+        register('server') {
+            args '--nogui'
+        }
+    }
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    mavenCentral()
+}
+
+dependencies {
+    implementation minecraft.dependency("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
+}
+
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }

@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[51,)"
+license="MIT"
+logoFile="icon.png"
+
+[[mods]]
+modId="corpsegraves"
+version="1.1.0+1.21-forge"
+displayName="Corpse Graves"
+authors="Kador"
+displayTest="IGNORE_SERVER_VERSION"
+description='''Never lose your hard-earned loot again. On death, items and XP are stored in a protected, skin-rendered corpse grave with a hologram and a Take All/Restore GUI.'''
+
+[[dependencies.corpsegraves]]
+    modId="forge"
+    mandatory=true
+    versionRange="[51,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.corpsegraves]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21,1.21.1)"
+    ordering="NONE"
+    side="BOTH"

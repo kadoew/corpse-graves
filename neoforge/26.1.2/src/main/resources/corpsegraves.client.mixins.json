@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.kador.corpsegraves.mixin.client",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"ClientMannequinSkinMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

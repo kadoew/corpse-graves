@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.kador.corpsegraves.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"LivingEntityDeathMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

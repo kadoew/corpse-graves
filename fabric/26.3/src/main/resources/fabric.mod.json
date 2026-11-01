@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "corpsegraves",
+	"version": "${version}",
+	"name": "Corpse Graves",
+	"description": "Never lose your hard-earned loot again! On death, your items are stored in a protected, skin-rendered corpse grave with a floating hologram.",
+	"authors": [
+		"Kador"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/",
+		"sources": "https://github.com/"
+	},
+	"license": "MIT",
+	"icon": "assets/corpsegraves/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.kador.corpsegraves.CorpseGraves"
+		],
+		"client": [
+			"com.kador.corpsegraves.client.CorpseGravesClient"
+		]
+	},
+	"mixins": [
+		"corpsegraves.mixins.json",
+		{
+			"config": "corpsegraves.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
