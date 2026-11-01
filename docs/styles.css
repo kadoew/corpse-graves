@@ -239,7 +239,7 @@ section { padding-inline: clamp(18px, 4vw, 56px); }
   color: var(--muted);
   font-size: 0.75rem;
   text-align: center;
-  direction: rtl;
+  direction: ltr;
 }
 
 /* stats */
