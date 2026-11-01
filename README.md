@@ -1,59 +1,57 @@
 # Corpse Graves
 
-**لا تفقد غنائمك بعد الموت.** عند موت اللاعب تُحفظ أغراضه وخبرته داخل قبر محمي، بجسد يعرض سكين اللاعب الحقيقي، وهولوغرام عائم يعرض الاسم ومؤقت الاختفاء ومؤقت/حالة الحماية.
+**Never lose your loot again.** When a player dies, their inventory and XP are stored in a protected grave with a body that renders the player's real skin, a live hologram, and a Take All / Restore GUI.
 
-> **تنبيه:** هذا مود غير رسمي لماين كرافت Java Edition، وغير مرتبط بـ Mojang أو Microsoft. جرّبه أولاً على عالم/سيرفر اختباري واحتفظ بنسخة احتياطية. رخصة المشروع MIT.
+> **Unofficial mod.** Not affiliated with Mojang or Microsoft. Test on a backup world/server first. Licensed under MIT.
+>
+> **العربية:** [README.ar.md](README.ar.md)
 
-## الميزات
+## Features
 
-- سكين اللاعب الحقيقي على الجسد (Mannequin في 26.x، وجسد مخصص في النسخ الأقدم).
-- حماية المالك، مؤقت فتح للآخرين، وتجاوز للمشرفين.
-- هولوغرام حي: الاسم، وقت الاختفاء، وحالة/وقت الحماية بألوان قابلة للتعديل.
-- واجهة مخصصة بزرّي **Take All** و **Restore**، و **Shift + كليك** لاستعادة كل شيء إلى خاناته الأصلية.
-- خبرة 50% افتراضياً (0–100 قابلة للتعديل).
-- اختفاء ذكي، إيقاف المؤقت أثناء غياب المالك أو إغلاق التشك، وبقاء البيانات بعد إعادة التشغيل.
-- إنقاذ الفراغ، دعم curse of vanishing، وحد أقصى للقبور لكل لاعب.
-- إعدادات JSON عميقة: المؤقتات، الألوان، حجم/ارتفاع الهولوغرام، وضعية الجسد، الخبرة، وإنقاذ الفراغ.
-- أوامر إدارة: `locate`، `reload`، `unlock`، `remove`، `open`، `restore`.
+- Real player skin: vanilla Mannequin on 26.x, custom skin-rendered body on older versions.
+- Owner protection, unlock timer and operator bypass.
+- Live hologram: owner name, despawn countdown, protection status and countdown.
+- Custom GUI with **Take All** and **Restore**; **Shift + right-click** restores everything to its original slots.
+- 50% XP recovery by default (0–100 configurable).
+- Smart despawn: pauses while the owner is offline or the chunk is unloaded; survives restarts.
+- Void rescue, curse-of-vanishing support and a configurable grave limit per player.
+- Deep JSON config for timers, colors, hologram scale/height, corpse pose, XP and void rescue.
+- Server commands: `locate`, `reload`, `unlock`, `remove`, `open`, `restore`.
 
-## الإصدارات المدعومة (23 جرّة)
+## Supported versions (23 builds)
 
-| اللودر | الإصدارات | العدد |
+| Loader | Versions | Builds |
 |---|---|---|
-| Fabric | 26.1، 26.1.1، 26.1.2، 26.2، 26.3، 26.4-alpha.6، 1.21.1، 1.21، 1.20.1 | 9 |
-| Forge | 1.20.1، 1.21، 1.21.1، 26.1، 26.1.1، 26.1.2، 26.2، 26.3 | 8 |
-| NeoForge | 1.20.1 (توافق)، 1.21، 1.21.1، 26.1.2، 26.2، 26.3 | 6 |
+| Fabric | 26.1, 26.1.1, 26.1.2, 26.2, 26.3, 26.4-alpha.6, 1.21.1, 1.21, 1.20.1 | 9 |
+| Forge | 1.20.1, 1.21, 1.21.1, 26.1, 26.1.1, 26.1.2, 26.2, 26.3 | 8 |
+| NeoForge | 1.20.1 (compatibility), 1.21, 1.21.1, 26.1.2, 26.2, 26.3 | 6 |
 
-**حدود المنبع:** لا يوجد Forge أو NeoForge لماين كرافت 26.4، ولا إصدارات NeoForge منشورة لـ26.1/26.1.1. نسخة NeoForge 1.20.1 هي جرة التوافق الثنائي مع فرع Forge 47.1.x. التفاصيل الكاملة في [SOURCE-MAP.md](SOURCE-MAP.md).
+**Upstream gaps:** Minecraft 26.4 has no Forge or NeoForge release, and NeoForge never published 26.1/26.1.1. The NeoForge 1.20.1 build is a binary-compatible copy of the Forge 47.1.x jar. See [SOURCE-MAP.md](SOURCE-MAP.md).
 
-## التحميل
+## Download
 
-- **GitHub Releases:** `https://github.com/kadoew/corpse-graves/releases` — ارفع الجرار والحزمة هنا بعد إنشاء المستودع.
-- **صفحة GitHub Pages:** `https://kadoew.github.io/corpse-graves/` — تُنشر من مجلد `docs/` بعد تفعيل Pages.
-- **مرايا مؤقتة/دائمة حالياً:**
-  - صفحة الإصدار: https://telegra.ph/Corpse-Graves-110--تحميل-Fabric-وForge-وNeoForge-11-01
-  - الحزمة الكاملة: https://files.catbox.moe/h6miy2.zip
-    `SHA-256: bf201d761d61fd7adb9e57788db9da347fb8582fc1ba3b9fe504bb2c37ca3586`
+- **Website:** https://kadoew.github.io/corpse-graves/
+- **Release with all jars:** https://github.com/kadoew/corpse-graves/releases/tag/v1.1.0
+- **Complete bundle:** `docs/downloads/corpsegraves-all-families.zip` (23 jars + 7 Fabric API jars + config + docs, ~18 MB).
+- **Checksums:** `docs/downloads/SHA256SUMS.txt`.
 
-> بعد إنشاء مستودعك، استبدل `kadoew` في هذا الملف وفي `docs/` إن لزم.
+Use exactly **one** Corpse Graves jar per `mods` folder. Do not mix Fabric, Forge and NeoForge jars.
 
-## التثبيت
+## Install
 
 ### Fabric
-1. ثبّت Fabric Loader المناسب: 0.19.3+ لـ26.x، و0.16+ لـ1.21.x، و0.15+ لـ1.20.1.
-2. ضع جرة المود مع إصدار **Fabric API** المطابق في مجلد `mods` على العميل والسيرفر.
-3. استخدم Java 25 لـ26.x، وJava 21 لـ1.21/1.21.1، وJava 17 لـ1.20.1.
+1. Install Fabric Loader: 0.19.3+ for 26.x, 0.16+ for 1.21.x, 0.15+ for 1.20.1.
+2. Put the matching mod jar and **Fabric API** build in `mods` on the client and server.
+3. Use Java 25 for 26.x, Java 21 for 1.21/1.21.1, Java 17 for 1.20.1.
 
 ### Forge / NeoForge
-1. ثبّت إصدار اللودر المطابق (Forge 47.x/51/52/62/63/64/65/66، NeoForge 47.1.106/21.0.167/21.1.176/26.1.2.125/26.2.0.93/26.3.0.100).
-2. ضع الجرة فقط في `mods` على العميل والسيرفر. لا تحتاج Fabric API.
-3. لا تخلط جرة Fabric مع Forge أو NeoForge، والعكس صحيح.
+1. Install the loader version listed in the download row.
+2. Put only the mod jar in `mods` on the client and server. No Fabric API is required.
+3. Do not mix loader families.
 
-**مهم:** لا تضع أكثر من جرة Corpse Graves واحدة في `mods`؛ وجود أكثر من نسخة بنفس معرف المود يسبب خطأ.
+## Configuration
 
-## الإعدادات
-
-الملف: `config/corpsegraves.json` (نموذج في `docs/downloads/corpsegraves.sample.json`).
+`config/corpsegraves.json` (sample: `docs/downloads/corpsegraves.sample.json`). Apply changes with `/corpsegraves reload`.
 
 ```json
 {
@@ -72,47 +70,30 @@
 }
 ```
 
-بعد التعديل: `/corpsegraves reload`.
+## Build from source
 
-## البناء من المصدر
+- JDK 17 (1.20.1), JDK 21 (1.21.x), JDK 25 (26.x).
+- Each project contains its own Gradle wrapper: `./gradlew build` or `gradlew.bat build`.
+- Build everything:
+  ```powershell
+  $env:JAVA17_HOME="C:\path\to\jdk17"
+  $env:JAVA21_HOME="C:\path\to\jdk21"
+  $env:JAVA25_HOME="C:\path\to\jdk25"
+  ./build-all.ps1
+  ```
+- Details: [BUILDING.md](BUILDING.md). Source map: [SOURCE-MAP.md](SOURCE-MAP.md). Maintenance workflow: [MAINTAINERS.md](MAINTAINERS.md).
 
-- Java 17 لـ1.20.1، Java 21 لـ1.21.x، Java 25 لـ26.x.
-- استخدم الـwrapper المرفق داخل كل مشروع: `./gradlew build` (أو `gradlew.bat` على Windows).
-- لبناء كل المشاريع: `pwsh ./build-all.ps1` بعد ضبط `JAVA17_HOME` و`JAVA21_HOME` و`JAVA25_HOME`.
-- التفاصيل في [BUILDING.md](BUILDING.md)، وخطة الصيانة في [MAINTAINERS.md](MAINTAINERS.md).
+## Testing
 
-## بنية المستودع
+- All 23 builds boot their dedicated servers to `Done` and create graves.
+- Full real-client GUI/Take All passes: Fabric 26.3/1.21.1/1.20.1, Forge 26.3/1.20.1, NeoForge 26.3/1.21.1.
+- Vanilla-client quick loot: Forge 1.21/1.21.1/26.3 and NeoForge 1.20.1.
+- The remaining 26.x builds are server-tested (boot + grave creation) without a full visual pass.
 
-```
-fabric/<version>/       مشاريع Fabric (26.3 هو المرجع الأساسي للعائلة الحديثة)
-forge/<version>/        مشاريع Forge لكل إصدار
-neoforge/<version>/     مشاريع NeoForge لكل إصدار منشور
-docs/                   الموقع الجاهز لـGitHub Pages (يشمل الجرار والإعدادات والبصمات)
-build-all.ps1           بناء كل المشاريع وجمع الجرار
-MAINTAINERS.md          خريطة المصادر، تمرير الإصلاحات، واختبارات الإصدار
-SOURCE-MAP.md           مصدر كل مجلد والحالات المعروفة
-PUBLISH-GITHUB.md       خطوات النشر على GitHub وPages بالتفصيل
-```
+## Contributing
 
-## الاختبار والحدود
+Open an issue with your Minecraft version, loader/version, exact jar name and `latest.log`. Use the bug report template. Keep changes MIT-compatible and do not commit worlds, logs, tokens or secrets. See [MAINTAINERS.md](MAINTAINERS.md) for the fix-and-release workflow.
 
-- جميع السيرفرات الـ23 تصل `Done` وتنشئ قبوراً.
-- فحص كامل بعميل حقيقي: Fabric 26.3/1.21.1/1.20.1، Forge 26.3/1.20.1، NeoForge 26.3/1.21.1.
-- عميل Vanilla (Quick Loot): Forge 1.21/1.21.1/26.3، وNeoForge 1.20.1 (3 ستاكات + 698 خبرة).
-- بقية نسخ 26.x جُرِّبت على سيرفرات مخصصة فقط (تحميل + إنشاء قبور)، دون فحص بصري كامل.
+## License
 
-## المساهمة
-
-- افتح **Issue** قبل التغيير الكبير، واذكر نسخة اللعبة واللودر وأحدث `latest.log`.
-- استخدم [.github/ISSUE_TEMPLATE/bug_report.yml](.github/ISSUE_TEMPLATE/bug_report.yml).
-- التزم برخصة MIT، ولا ترفع عوالم أو سجلات لاعبين أو مفاتيح/توكنات.
-
-## الرخصة
-
-MIT — انظر [LICENSE](LICENSE). حقوق النشر (c) 2026 Kador.
-
----
-
-## English
-
-Corpse Graves is an unofficial Minecraft Java mod that stores death loot and XP in a protected, skin-accurate corpse grave with a hologram, owner unlock timer and a Take All/Restore GUI. It supports 9 Fabric, 8 Forge and 6 NeoForge builds (23 jars total). Source and site are MIT-licensed. Build instructions are in [BUILDING.md](BUILDING.md); release/maintenance workflow is in [MAINTAINERS.md](MAINTAINERS.md). Not affiliated with Mojang or Microsoft.
+MIT © 2026 Kador. See [LICENSE](LICENSE) and [THIRD-PARTY.md](THIRD-PARTY.md).
